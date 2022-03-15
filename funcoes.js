@@ -2,18 +2,29 @@ var numSort = []
 var numDig = []
 
 function sorteioNum(){
-    numSort = []
+
+
+
+
+    if(numDig.length < 6){
+        alert("Antes de sortear digite 6 numeros nos campos")
+    } else {
+
+    numSort=[]
     do{
-        let sort = Math.ceil (Math.random() * 60)
-        
-        if(!numSort.includes(sort))
-           numSort.push(sort)
+        let sort = Math.ceil(Math.random()*60)        
 
-    }while(numSort.length < 6);
+    }while(numSort.length<6)
 
-    document.getElementById("numsort").innerText = numSort
+    document.getElementById("numsort").innerHTML=numSort
+
+
+
     verificaAcertos()
+    }
+
 }
+
 
  function getNum(valor,pos){
      valor = Number(valor)
