@@ -24,3 +24,17 @@ verifica a quantidade de acertos!!!
 | Tela inicial | Primeira Rodada |
 |--------------|-----------------|
 |imagem 1      | imagem 2        | 
+
+
+### Código Principal
+```js:
+function verificaAcertos() {
+    let cont = 0
+    numDig.forEach(function (valor, index) {
+        if (numSort.includes(valor)) {
+            cont = cont + 1
+        }
+    })
+    document.getElementById("total").innerText = cont
+}
+```
